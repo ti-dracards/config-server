@@ -1,0 +1,55 @@
+restTemplate:
+  connectTimeout: '120000 '
+  readTimeout: 120000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
+      springframework:
+        jdbc:
+          core: DEBUG
+spring:
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: false
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+  security:
+    user:
+      name: api
+      password: api
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    hikari:
+      connectionTimeout: 30000
+      idleTimeout: 30000
+      maxLifetime: 2000000
+      maximumPoolSize: 20
+      minimumIdle: 5
+      poolName: HikariPoolDracards
+    password: dracards
+    url: jdbc:oracle:thin:@//localhost:1521/ORCLPDB1.localdomain
+    username: dracard
+  jpa:
+    database-platform: org.hibernate.dialect.Oracle12cDialect
+    properties:
+      hibernate:
+        format_sql: true
+        id:
+          new_generator_mappings: true
+      org:
+        hibernate:
+          envers:
+            audit_table_suffix: _AUDIT
+            revision_field_name: REVISION_ID
+            revision_type_field_name: REVISION_TYPE
+    show-sql: true
