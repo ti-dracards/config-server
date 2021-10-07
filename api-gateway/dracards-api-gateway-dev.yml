@@ -27,4 +27,4 @@ spring:
                client-id: drac-back-client
                client-secret: 35e9d010-7ecd-404d-bd73-a42b0726a2d9
                authorization-grant-type: authorization_code
-               redirect-uri: "{baseUrl}/login/oauth2/code/drac-back-client" 
+               redirect-uri: "http://35.231.41.35:8080/login/oauth2/code/drac-back-client" 
