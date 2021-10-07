@@ -20,11 +20,11 @@ spring:
       client:
         provider:
           keycloak-provider:
-            issuer-uri: http://localhost:8080/auth/realms/dracards-realm
+            issuer-uri: http://35.231.41.35:8080/auth/realms/drac-realm
         registration:
           keycloak-spring-gateway-client:
                provider: keycloak-provider
-               client-id: dracards-api-gateway-client
-               client-secret: 1e5c1d8b-de0b-446b-9c48-aa9c08cc9c45
+               client-id: drac-back-client
+               client-secret: 35e9d010-7ecd-404d-bd73-a42b0726a2d9
                authorization-grant-type: authorization_code
-               redirect-uri: "{baseUrl}/login/oauth2/code/dracards-api-gateway-client" 
+               redirect-uri: "{baseUrl}/login/oauth2/code/drac-back-client" 
