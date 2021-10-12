@@ -4,7 +4,7 @@ restTemplate:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://35.231.41.35:8761/eureka
 logging:
   level:
     org:
@@ -36,9 +36,9 @@ spring:
       maximumPoolSize: 20
       minimumIdle: 5
       poolName: HikariPoolDracards
-    password: COnevVvSC3Lc
-    url: jdbc:oracle:thin:@//oracle-53202-0.cloudclusters.net:13306/XE
-    username: dracards
+    password: dracards
+    url: jdbc:oracle:thin:@//localhost:1521/ORCLPDB1.localdomain
+    username: dracard
   jpa:
     database-platform: org.hibernate.dialect.Oracle12cDialect
     properties:
